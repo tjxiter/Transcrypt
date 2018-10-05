@@ -2,4 +2,4 @@ dist: xenial
 sudo: yes 
 language: python
 python: '3.7'   
-script: ./transcrypt/development/continuous_integration/run.sh
+script: bash ./transcrypt/development/continuous_integration/run.sh
