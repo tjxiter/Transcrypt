@@ -1,5 +1,6 @@
 dist: xenial
 sudo: yes
+env: global: 
 language: python
 python: '3.7'   
-script: python ./transcrypt/development/shipment/shipment_test.py
+script: ./transcrypt/development/continuous_integration/run.sh
