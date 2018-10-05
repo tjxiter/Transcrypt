@@ -2,4 +2,4 @@ dist: xenial
 sudo: yes
 language: python
 python: '3.7'   
-script: bash ./transcrypt/development/shipment/shipment_test.py
+script: python ./transcrypt/development/shipment/shipment_test.py
