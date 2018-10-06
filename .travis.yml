@@ -1,10 +1,12 @@
 dist: xenial
 sudo: yes
 
-addons: chrome: stable
+addons:
+    chrome: stable
 
 language: python
-python: '3.7'
-install: pip install mypy
+python:
+    - '3.7'
 
+install: pip install mypy
 script: bash ./transcrypt/development/continuous_integration/run.sh
