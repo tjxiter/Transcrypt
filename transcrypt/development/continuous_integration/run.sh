@@ -2,8 +2,7 @@
 chmod -R 777 .
 
 # Start headless browser instance, Python's webbrowser.open will now refer to this instance
-# google-chrome-stable --headless --disable-gpu
-chrome --no-sandbox --no-default-browser-check --no-first-run --disable-default-apps
+- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 # Enable shipment_test.py to find run_python
 export PATH=$PATH:./transcrypt
