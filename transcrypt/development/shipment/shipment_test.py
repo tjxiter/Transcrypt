@@ -72,15 +72,18 @@ def test (relSourcePrepath, run, extraSwitches, messagePrename = '', nodeJs = Fa
         if nodeJs:
             os.system (f'start cmd /k node {targetPrepath}.bundle.js'.format (moduleName))
             time.sleep (5)
-            webbrowser.open ('http://localhost:8090', new = openNewTab)           
+            webbrowser.open ('http://localhost:8000', new = openNewTab)
+            # webbrowser.open ('http://localhost:8090', new = openNewTab)
         else:
-            webbrowser.open (f'http://localhost:8080/{relSourcePrepath}.html', new = openNewTab)
+            webbrowser.open (f'http://localhost:8000/{relSourcePrepath}.html', new = openNewTab)
+            # webbrowser.open (f'http://localhost:8080/{relSourcePrepath}.html', new = openNewTab)
             
 os.system ('cls' if os.name == 'nt' else 'clear')
         
 # Start a node http server in the Transcryp/transcrypt directory
 if not commandArgs.blind:
-    os.system (f'start cmd /k http-server {appRootDir} -p8080 -c-1')   # -c-1 means 'Clear cache'
+    os.system (f'start python http-server')
+    # os.system (f'start cmd /k http-server {appRootDir} -p8080 -c-1')   # -c-1 means 'Clear cache'
 
 # Allow visual check of command line options
 os.system (f'{transpileCommand} -h')
